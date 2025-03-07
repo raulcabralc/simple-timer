@@ -5,20 +5,26 @@
 }
 
 body {
-    background-color: #676767;
+    background: linear-gradient(to left, #322478, #615a85);
 }
 
-.container {
-    background: #fff;
+#container {
+    height: 500px;
     width: 80%;
     max-width: 1000px;
     margin: 50px auto;
     align-content: center;
+    justify-content: center;
+}
+
+.timer-container {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     padding: 20px;
 }
 
-.container h1 {
+.timer-container h1 {
     text-align: center;
 }
 
@@ -40,14 +46,38 @@ p {
 button {
     padding: 10px;
     margin: 0 5px;
-    border: solid black 2px;
+    border-radius: 10px;
+    border: solid transparent 1px;
     width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
     transition: all 0.1s ease-in-out;
     background-color: #e5e5e5;
 }
 
 button:hover {
-    background: #d8d4d4;
+    background: #d4d4d4;
+}
+
+button:active {
+    background: #a9a9a9;
+}
+
+button.pause:hover {
+    background: rgb(255, 152, 152);
+}
+
+button.pause:active {
+    background: rgb(255, 105, 105);
+}
+
+button.start:hover {
+    background: rgb(159, 255, 142);
+}
+
+button.start:active {
+    background: rgb(112, 255, 87);
 }
 
 .paused {
